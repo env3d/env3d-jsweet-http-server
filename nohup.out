@@ -1,0 +1,15 @@
+Error: Could not find or load main class org.jsweet.webapi.ServerLauncher
+Exception in thread "main" java.lang.NoClassDefFoundError: org/apache/log4j/Logger
+	at org.jsweet.webapi.ServerLauncher.<clinit>(ServerLauncher.java:7)
+Caused by: java.lang.ClassNotFoundException: org.apache.log4j.Logger
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 1 more
+2018-10-12 11:28:04.800 INFO  ServerLauncher:11 - starting server
+2018-10-12 11:28:04.802 INFO  ServerLauncher:30 - exiting
+2018-10-12 11:28:04.830 INFO  Server:69 - ...
+Running! Point your browers to http://localhost:8580/ 
+
+2018-10-12 11:28:04.831 INFO  ServerLauncher:17 - server=JSweet server listening on 8580 - current directory: /Users/jmadar/Documents/env3d/jsweet-http-server/.

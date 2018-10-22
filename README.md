@@ -1,3 +1,9 @@
+# Forked from the jsweet http server
+
+We did this to include the env3d library, as well as modified the server to only transpile
+to Typescript, as Typescript -> Javascript will be performed on the client.  Below is the 
+original README for reference.
+
 # JSweet HTTP Server
 
 This project provides light HTTP server with a JSON Rest Web API to run the [JSweet transpiler](https://github.com/cincheo/jsweet) from any client, without having to install JSweet locally.

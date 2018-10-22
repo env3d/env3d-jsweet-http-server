@@ -1,0 +1,14 @@
+FROM openjdk:8-jdk-slim
+
+RUN mkdir /app; mkdir /app/bin; mkdir /app/www
+WORKDIR /app
+
+COPY bin /app/bin
+COPY www /app/www
+COPY run.sh /app
+
+EXPOSE 8580
+
+CMD ["./run.sh"]
+
+ 

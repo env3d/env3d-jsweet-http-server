@@ -272,7 +272,8 @@ public class Server extends NanoHTTPD {
 
 		StringBuilder outBuilder;
 
-		if ("true".equals(parameters.get("tsout"))) {
+//		if ("true".equals(parameters.get("tsout"))) {
+                if (true) {
 			outBuilder = new StringBuilder();
 			for (SourceFile sourceFile : sources) {
 				if (sourceFile.getTsFile() == null) {
@@ -400,6 +401,7 @@ public class Server extends NanoHTTPD {
 		transpiler.setNoRootDirectories(noRootDirectories);
 		transpiler.setIgnoreAssertions(!enableAssertions);
 		transpiler.setIgnoreJavaFileNameError(true);
+                transpiler.setGenerateJsFiles(false);
 
 		logger.info("transpiler initialized");
 
