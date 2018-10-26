@@ -100,11 +100,30 @@
 						</goals>
 						<configuration>
 							<outputDirectory>${project.build.directory}/dependencies</outputDirectory>
-
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
+                             <plugin>
+                               <artifactId>maven-antrun-plugin</artifactId>
+                               <executions>
+                                 <execution>
+                                   <id>copy-resources</id>
+                                   <!-- here the phase you need -->
+                                   <phase>package</phase>
+                                   <goals>
+                                     <goal>run</goal>
+                                   </goals>
+                                   <configuration>
+                                     <tasks>
+                                       <copy file="${project.build.directory}/${project.build.finalName}.jar"
+                                             tofile="${basedir}/bin/env3d-jsweet-http-server.jar">
+                                       </copy>
+                                     </tasks>
+                                   </configuration>            
+                                 </execution>
+                               </executions>
+                             </plugin>
 		</plugins>
 	</build>
 	<profiles>
